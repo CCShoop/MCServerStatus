@@ -96,7 +96,7 @@ class MCStatusClient(Client):
                 for server in self.servers:
                     if server.name == item['name'] and server.address == item['address']:
                         found = True
-                        print(f'{get_log_time()}> Recognized server {item['name']} with message id {item['message_id']}')
+                        print(f'{get_log_time()}> Recognized server {item["name"]} with message id {item["message_id"]}')
                 if not found:
                     try:
                         guild = self.get_guild(item['guild_id'])
@@ -104,7 +104,7 @@ class MCStatusClient(Client):
                         message = await channel.fetch_message(item['message_id'])
                         server = MCServer(item['name'], item['address'], message=message)
                         self.servers.append(server)
-                        print(f'{get_log_time()}> Recovered server {item['name']} with message id {item['message_id']}')
+                        print(f'{get_log_time()}> Recovered server {item["name"]} with message id {item["message_id"]}')
                     except Exception as e:
                         print(f'{get_log_time()}> Failed to load server message: {e}')
             print(f'{get_log_time()}> Successfully loaded {self.FILE_PATH}')
