@@ -122,6 +122,7 @@ class MCStatusClient(Client):
             server_dicts.append(server_dict)
         with open(self.FILE_PATH, 'w') as json_file:
             json.dump(server_dicts, json_file, indent=4)
+        print(f'{get_log_time()}> Successfully wrote {self.FILE_PATH}')
 
     async def setup_hook(self):
         await self.tree.sync()
