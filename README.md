@@ -1,5 +1,5 @@
-# GuessTheTracker
-Discord bot to show server status in Discord.
+# MCServerStatus
+Discord bot to show Minecraft server status in a Discord message.
 
 
 ### You need a .env file in the directory!
@@ -11,5 +11,5 @@ Discord bot to show server status in Discord.
 ### Slash commands
 Supported slash commands are:
 
-* /addserver [IP] ([port])
+* /addserver [IP] [Name] ([port])
 * /removeserver [IP]
